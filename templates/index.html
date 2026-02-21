@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Flask App</title>
+    <meta charset="UTF-8">
+    <title>Flask Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hello Abhishek 🚀</h1>
+
+    <header>
+        <h1>🚀 Welcome to My Flask App</h1>
+        <p>Deployed with AWS & DevOps Practices</p>
+        <a href="#" class="btn">Get Started</a>
+    </header>
+
+    <section class="features">
+        <div class="card">
+            <h2>Fast</h2>
+            <p>Built using lightweight Flask framework.</p>
+        </div>
+
+        <div class="card">
+            <h2>Secure</h2>
+            <p>Production-ready deployment with Nginx & Gunicorn.</p>
+        </div>
+
+        <div class="card">
+            <h2>Scalable</h2>
+            <p>Cloud deployed & ready for scaling.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | Cloud Project</p>
+    </footer>
+
 </body>
 </html>

@@ -3,12 +3,11 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# MySQL connection function
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="1",
+        user="flaskuser",
+        password="Flask@123",
         database="flaskdb"
     )
 

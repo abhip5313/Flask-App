@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registration Success</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/success.css') }}">
-</head>
-<body>
-
-<div class="success-card">
-    <h2>✅ Registration Successful</h2>
-
-    <table>
-        <tr><th>Full Name</th><td>{{ data.fullname }}</td></tr>
-        <tr><th>Email</th><td>{{ data.email }}</td></tr>
-        <tr><th>Phone</th><td>{{ data.phone }}</td></tr>
-        <tr><th>Username</th><td>{{ data.username }}</td></tr>
-        <tr><th>Password</th><td>{{ data.password }}</td></tr>
-    </table>
-
-    <a href="/">Go Back</a>
-</div>
-
-</body>
-</html>
+<table>
+    <tr><th>Full Name</th><td>{{ user[1] }}</td></tr>
+    <tr><th>Email</th><td>{{ user[2] }}</td></tr>
+    <tr><th>Phone</th><td>{{ user[3] }}</td></tr>
+    <tr><th>Username</th><td>{{ user[4] }}</td></tr>
+    <tr><th>Password</th><td>{{ user[5] }}</td></tr>
+</table>

@@ -25,5 +25,15 @@
     </table>
 
     <br>
-    <a href="/">Go Back</a>
+    <a href="{{ url_for('show_users') }}">
+    <button style="padding:10px 20px; background-color:green; color:white; border:none; border-radius:5px;">
+        View All Users
+    </button>
+</a>
+
+<a href="{{ url_for('register') }}">
+    <button style="padding:10px 20px; background-color:blue; color:white; border:none; border-radius:5px;">
+        Back to Register
+    </button>
+</a>
 </div>

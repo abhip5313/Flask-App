@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>📋 Registered Users</h2>
+
+    {% if users %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.fullname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.username }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p style="text-align:center; margin-top:20px;">
+            🚫 No users found in database.
+        </p>
+    {% endif %}
+
+    <div style="text-align:center;">
+        <a href="/">⬅ Back to Registration</a>
+    </div>
+</div>
+
+</body>
+</html>

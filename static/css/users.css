@@ -1,0 +1,97 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Card */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Table Header */
+thead {
+    background: #4e73df;
+    color: white;
+}
+
+thead th {
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Table Body */
+tbody td {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fc;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background-color: #e2e6f5;
+    transition: 0.3s;
+}
+
+/* Button */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #4e73df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    background: #2e59d9;
+    transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

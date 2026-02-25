@@ -24,7 +24,7 @@ def submit():
     password = request.form.get("password")
 
     conn = get_db_connection()
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True)   # 👈 IMPORTANT
 
     cursor.execute("""
         INSERT INTO users (fullname, email, phone, username, password)
@@ -33,6 +33,7 @@ def submit():
 
     conn.commit()
 
+    # 🔥 Latest record fetch
     cursor.execute("SELECT * FROM users ORDER BY id DESC LIMIT 1")
     user = cursor.fetchone()
 
@@ -40,6 +41,19 @@ def submit():
     conn.close()
 
     return render_template("success.html", user=user)
+
+@app.route("/users")
+def show_users():
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM users")
+    users = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template("users.html", users=users)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
